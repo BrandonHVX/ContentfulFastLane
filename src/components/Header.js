@@ -34,17 +34,7 @@ class Header extends Component {
       togglemethod: !this.state.togglemethod
     });
   }
-  componentDidMount() {
-    window.addEventListener(
-      "scroll",
-      () => {
-        this.setState({
-          isTop: window.scrollY > 110
-        });
-      },
-      false
-    );
-  }
+
   render() {
     const stickyheader = this.state.isTop ? "sticky" : "";
     return (
