@@ -10,7 +10,7 @@ import Services from "../components/Services";
 import Cta from "../components/Cta";
 import Contact from "../components/Contact";
 import Whychooseus from "../components/Whychooseus";
-import Video from "../components/Video";
+
 import Footer from "../components/Footertwo";
 // import Team from "../components/Team";
 // import Skills from "../components/Skills";

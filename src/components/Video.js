@@ -1,19 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
 import $ from "jquery";
-import "magnific-popup";
 
 import videobg from "../assets/img/video-bg.jpg";
 
 class Video extends Component {
-  componentDidMount() {
-    function popup() {
-      $(".popup-youtube").magnificPopup({
-        type: "iframe"
-      });
-    }
-    popup();
-  }
   render() {
     return (
       <section className="video-section">
