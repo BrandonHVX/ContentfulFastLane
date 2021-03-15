@@ -7,10 +7,12 @@ import Layout from "../components/Layout";
 import Banner from "../components/Banner";
 import About from "../components/About";
 import Services from "../components/Services";
+import Process from "../components/Process";
 import Cta from "../components/Cta";
 import Contact from "../components/Contact";
+import Job from "../components/Job";
 import Whychooseus from "../components/Whychooseus";
-
+import Counter from "../components/Counter";
 import Footer from "../components/Footertwo";
 // import Team from "../components/Team";
 // import Skills from "../components/Skills";
@@ -28,13 +30,19 @@ class RootIndex extends React.Component {
         </MetaTags>
         <Header />
         <Banner />
-        {/* <Video /> */}
-        <section className="about-section style-1 pt-120 pb-120">
-          <About />
+        {/* <Process /> */}
+        <section className="counter-section mt-negative">
+          <Counter />
         </section>
+        {/* <Video /> */}
+        {/* <section className="about-section style-1 pt-120 pb-120">
+          <About />
+          <Cta />
+        </section> */}
         <Services />
-        {/* <Cta /> */}
-        <Whychooseus />
+        <Job />
+
+        {/* <Whychooseus /> */}
         <Contact />
         <Footer />
         {/* 

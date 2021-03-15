@@ -3,60 +3,30 @@ import { Link } from "gatsby";
 
 import icon1 from "../assets/img/svg/interior-energy.svg";
 import icon2 from "../assets/img/svg/modified-solar.svg";
-import icon3 from "../assets/img/svg/single-ply.svg";
-import icon4 from "../assets/img/svg/security.svg";
-import icon5 from "../assets/img/svg/single-ply.svg";
-import icon6 from "../assets/img/svg/panel-setup.svg";
-import icon7 from "../assets/img/svg/built-up-solar.svg";
-import icon8 from "../assets/img/svg/support.svg";
+import icon3 from "../assets/img/svg/security.svg";
 
-// Services
-const serviceblock = [
+const servicesblock = [
   {
     icon: icon1,
-    title: "Interior Energy",
+    title: "Expedited Delivery",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
   },
   {
     icon: icon2,
-    title: "Modified solar",
+    title: "Fastlane Final Mile",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
   },
   {
     icon: icon3,
-    title: "Single Ply solar",
+    title: "Long Hual",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
   },
   {
-    icon: icon4,
-    title: "High Security",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
-  },
-  {
-    icon: icon5,
-    title: "Single Ply solar",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
-  },
-  {
-    icon: icon6,
-    title: "Panel Setup",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
-  },
-  {
-    icon: icon7,
-    title: "Built-Up solar",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
-  },
-  {
-    icon: icon8,
-    title: "Team Support",
+    icon: icon2,
+    title: "Warehousing",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
   }
@@ -64,14 +34,14 @@ const serviceblock = [
 class Services extends Component {
   render() {
     return (
-      <section className="services-secton services-secton-two pt-120 pb-120">
+      <section className="services-secton services-secton-three pt-120 pb-120">
         <div className="container">
           {/* Section Title */}
           <div className="row align-items-center justify-content-between">
             <div className="col-lg-5 col-md-8 col-sm-7">
               <div className="section-title left-border">
                 <span className="title-tag">our services</span>
-                <h2>We Provide Superior solar Services with good passions</h2>
+                <h2>SUPERIOR SOLUTIONS THAT GO THE EXTRA MILE</h2>
               </div>
             </div>
             <div className="col-lg-6 col-md-4 col-sm-5 d-none d-sm-block">
@@ -84,9 +54,9 @@ class Services extends Component {
           </div>
           <div className="services-loop mt-50">
             <div className="row justify-content-center">
-              {serviceblock.map((item, i) => (
-                <div className="col-lg-3 col-md-4 col-sm-6" key={i}>
-                  <div className="single-service-two">
+              {servicesblock.map((item, i) => (
+                <div className="col-lg-3 col-md-6 col-sm-6" key={i}>
+                  <div className="single-service-two white-bg">
                     <div className="top-icon">
                       <i className="fal fa-long-arrow-right" />
                     </div>

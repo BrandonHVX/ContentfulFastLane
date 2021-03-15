@@ -1,0 +1,76 @@
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import Input from "./Input";
+
+import { isInfo } from "./validation";
+
+const UserDetails = ({ step, setStep, user, setUser }) => {
+  const [errors, setErrors] = useState({});
+
+  // handle onchange
+  const handleUser = ({ target }) => {
+    setUser({
+      type: "UPDATE_PERSONAL_INFO",
+      payload: { [target.name]: target.value }
+    });
+  };
+  const handleContinue = e => {
+    e.preventDefault();
+    const errors = isInfo(user);
+    setErrors(errors);
+    if (Object.keys(errors).length > 0) return;
+    setStep(step + 1);
+  };
+  return (
+    <form
+      onSubmit={handleContinue}
+      className="RegisterForm"
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <Input
+        type="text"
+        name="firstName"
+        value={user.firstName}
+        label="First name"
+        onChange={e => handleUser(e)}
+        error={errors.firstName}
+      />
+      <Input
+        type="text"
+        name="lastName"
+        value={user.lastName}
+        label="Last name"
+        onChange={e => handleUser(e)}
+        error={errors.lastName}
+      />
+      <Input
+        type="tel"
+        label="Phone number"
+        name="phoneNumber"
+        value={user.phoneNumber}
+        onChange={e => handleUser(e)}
+        error={errors.phoneNumber}
+      />
+      <Input
+        type="email"
+        label="Email address"
+        name="email"
+        value={user.email}
+        onChange={e => handleUser(e)}
+        error={errors.email}
+      />
+      <button type="submit"> Continue</button>
+    </form>
+  );
+};
+UserDetails.propTypes = {
+  step: PropTypes.number,
+  setStep: PropTypes.func,
+  user: PropTypes.object,
+  setUser: PropTypes.func
+};
+export default UserDetails;
