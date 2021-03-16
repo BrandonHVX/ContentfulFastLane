@@ -31,7 +31,7 @@ const NextOfKin = ({ step, setStep, user, setUser }) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...setUser })
+      body: encode({ "form-name": "contact", ...user })
     });
     setStep(step + 1);
   };
