@@ -39,12 +39,12 @@ const NextOfKin = ({ step, setStep, user, setUser }) => {
   return (
     <div>
       <form
-        onSubmit={handleSubmit}
         className="RegisterForm"
         name="contact"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
         <Input
