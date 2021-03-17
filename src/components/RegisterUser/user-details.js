@@ -22,15 +22,7 @@ const UserDetails = ({ step, setStep, user, setUser }) => {
     setStep(step + 1);
   };
   return (
-    <form
-      onSubmit={handleContinue}
-      className="RegisterForm"
-      name="contact"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-    >
-      <input type="hidden" name="form-name" value="contact" />
+    <form onSubmit={handleContinue} className="RegisterForm">
       <Input
         type="text"
         name="firstName"
