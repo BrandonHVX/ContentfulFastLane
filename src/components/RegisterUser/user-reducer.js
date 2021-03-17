@@ -3,11 +3,10 @@ export const DefaultUser = {
   lastName: "",
   phoneNumber: "",
   email: "",
-  nextOfKin: {
-    firstName: "",
-    lastName: "",
-    email: ""
-  }
+
+  firstName: "",
+  lastName: "",
+  email: ""
 };
 
 export const UserReducer = (user, { type, payload }) => {
