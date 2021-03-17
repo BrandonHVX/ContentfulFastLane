@@ -20,7 +20,7 @@ export const UserReducer = (user, { type, payload }) => {
     case "UPDATE_NEXTOFKIN_INFO":
       return {
         ...user,
-        ...user.nextOfKin,
+
         nextOfKin: {
           ...user.nextOfKin,
           ...payload
@@ -28,6 +28,6 @@ export const UserReducer = (user, { type, payload }) => {
       };
 
     default:
-      return user;
+      return user.nextOfKin;
   }
 };
