@@ -3,10 +3,11 @@ export const DefaultUser = {
   lastName: "",
   phoneNumber: "",
   email: "",
-
-  firstName: "",
-  lastName: "",
-  email: ""
+  nextOfKin: {
+    firstName: "",
+    lastName: "",
+    email: ""
+  }
 };
 
 export const UserReducer = (user, { type, payload }) => {
@@ -19,8 +20,8 @@ export const UserReducer = (user, { type, payload }) => {
     case "UPDATE_NEXTOFKIN_INFO":
       return {
         ...user,
+        ...user.nextOfKin,
         nextOfKin: {
-          ...user,
           ...user.nextOfKin,
           ...payload
         }
